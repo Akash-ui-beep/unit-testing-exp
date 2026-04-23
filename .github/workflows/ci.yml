@@ -35,8 +35,9 @@ jobs:
         run: |
           cd frontend
           npm install
+          npm install vitest
 
       - name: Run Frontend Tests
         run: |
           cd frontend
-          npm test
+          npx vitest run
