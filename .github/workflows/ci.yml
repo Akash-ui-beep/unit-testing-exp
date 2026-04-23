@@ -35,7 +35,11 @@ jobs:
         run: |
           cd frontend
           npm install
-          npm install vitest
+
+      - name: Fix permissions (important)
+        run: |
+          cd frontend
+          chmod +x node_modules/.bin/vitest
 
       - name: Run Frontend Tests
         run: |
